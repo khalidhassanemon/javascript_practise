@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deligate</title>
+</head>
+<body>
+    <h1>Explore Event Deligate</h1>
+    <ul id="list-container">
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Nemo, architecto tempore!</li>
+        <li class="item">Nesciunt, id esse.</li>
+        <li class="item">Maiores, repellendus libero.</li>
+        <li class="item">Natus, corporis ut?</li>
+        <li class="item">Perferendis, deleniti molestias!</li>
+    </ul>
+    <button id="btn-add-item">Add new Item</button>
+    <script>
+        const items=document.getElementsByClassName('item');
+        console.log(items);
+        // for(const item of items){
+        //     item.addEventListener('click',function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+         
+        // }
+        document.getElementById('list-container').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+        document.getElementById('btn-add-item').addEventListener('click',function(){
+            const listContainer=document.getElementById('list-container');
+            const li=document.createElement('li');
+            li.classList.add('item');
+            li.innerText='Brand New Item addeded';
+            listContainer.appendChild(li);
+        })
+    </script>
+</body>
+</html>
