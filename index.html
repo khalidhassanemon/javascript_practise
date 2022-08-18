@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom de baba </title>
+</head>
+<body>
+    <h1>Welcome to my DOM</h1>
+    <h1>My awesome dome de baba</h1>
+    <button onclick="console.log(7)">Click Me</button>
+    <button onclick="console.log(65)">Another Button</button>
+    <button onclick="document.body.style.backgroundColor='Yellow' ">Make Yellow</button><br>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="make-blue">Make Blue</button>
+    <ul id="link-title"> 
+        <li>Jalali Set</li>
+        <li>Safayet</li>
+        <li>honkey monkey</li>
+    </ul>
+    <img src="" alt="">
+  <script src="Dom.js"></script>
+  <script>
+const listcollection=document.getElementsByTagName('li');
+// console.log(listcollection);
+for(const li of listcollection){
+  console.log(li.innerText);
+}
+
+const Heading=document.getElementsByTagName('h1');
+// console.log(listcollection);
+for(const h1 of Heading){
+  console.log(h1.innerText);
+}
+ 
+const makeBlueButton=document.getElementById('make-blue');
+makeBlueButton.onclick=function makeblue(){
+document.body.style.backgroundColor='blue';
+}
+
+  </script>
+</body>
+</html>
